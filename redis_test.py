@@ -1,0 +1,96 @@
+# coding:gbk
+import json
+
+import redis
+
+
+def set_account_group_dict(id, account_group_dict, r):
+    r.hset("account_group_dict", id, json.dumps(account_group_dict, ensure_ascii=False))
+
+if __name__ == '__main__':
+    rtn = {'system_id': u'14288901937052FXJA', 'data': {u'9': {
+        '1': {'sz_a_inside_secuid': '0099996826', 'idtype': '0', 'sh_b_secuid': 'C115135358', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993762', 'sz_b_secuid': '0099996827', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996828', 'sh_a_credit_inside_secuid': '0099996828',
+              'gz_secuid': '0099996828', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474833',
+              'ggt_secuid': '0099996826', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48415',
+              'jjzh_secuid_8': '60144190000048412', 'jjzh_secuid_3': '60144190000048412',
+              'sh_a_inside_secuid': '855993762', 'sz_a_secuid': '0099996826', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993762', 'bjhg_sz_fundid': '', 'fundid': '48412',
+              'custid': '2747397', 'sz_a_credit_secuid': '0680030592', 'idno': '450203196205289831',
+              'bankcode': '6001'},
+        '0': {'sz_a_inside_secuid': '0099996824', 'idtype': '0', 'sh_b_secuid': 'C115135357', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993761', 'sz_b_secuid': '0099996825', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996826', 'sh_a_credit_inside_secuid': '0099996826',
+              'gz_secuid': '0099996826', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474832',
+              'ggt_secuid': '0099996824', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48411',
+              'jjzh_secuid_8': '60144190000048408', 'jjzh_secuid_3': '60144190000048408',
+              'sh_a_inside_secuid': '855993761', 'sz_a_secuid': '0099996824', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993761', 'bjhg_sz_fundid': '', 'fundid': '48408',
+              'custid': '2747396', 'sz_a_credit_secuid': '0680030591', 'idno': '130637197810230323',
+              'bankcode': '6001'},
+        '3': {'sz_a_inside_secuid': '0099996830', 'idtype': '0', 'sh_b_secuid': 'C115135360', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993764', 'sz_b_secuid': '0099996831', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996832', 'sh_a_credit_inside_secuid': '0099996832',
+              'gz_secuid': '0099996832', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474835',
+              'ggt_secuid': '0099996830', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48423',
+              'jjzh_secuid_8': '60144190000048420', 'jjzh_secuid_3': '60144190000048420',
+              'sh_a_inside_secuid': '855993764', 'sz_a_secuid': '0099996830', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993764', 'bjhg_sz_fundid': '', 'fundid': '48420',
+              'custid': '2747399', 'sz_a_credit_secuid': '0680030594', 'idno': '532623196406140020',
+              'bankcode': '6001'},
+        '2': {'sz_a_inside_secuid': '0099996828', 'idtype': '0', 'sh_b_secuid': 'C115135359', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993763', 'sz_b_secuid': '0099996829', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996830', 'sh_a_credit_inside_secuid': '0099996830',
+              'gz_secuid': '0099996830', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474834',
+              'ggt_secuid': '0099996828', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48419',
+              'jjzh_secuid_8': '60144190000048416', 'jjzh_secuid_3': '60144190000048416',
+              'sh_a_inside_secuid': '855993763', 'sz_a_secuid': '0099996828', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993763', 'bjhg_sz_fundid': '', 'fundid': '48416',
+              'custid': '2747398', 'sz_a_credit_secuid': '0680030593', 'idno': '430424196510276761',
+              'bankcode': '6001'}}, 13: {
+        '1': {'sz_a_inside_secuid': '0099996826', 'idtype': '0', 'sh_b_secuid': 'C115135358', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993762', 'sz_b_secuid': '0099996827', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996828', 'sh_a_credit_inside_secuid': '0099996828',
+              'gz_secuid': '0099996828', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474833',
+              'ggt_secuid': '0099996826', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48415',
+              'jjzh_secuid_8': '60144190000048412', 'jjzh_secuid_3': '60144190000048412',
+              'sh_a_inside_secuid': '855993762', 'sz_a_secuid': '0099996826', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993762', 'bjhg_sz_fundid': '', 'fundid': '48412',
+              'custid': '2747397', 'sz_a_credit_secuid': '0680030592', 'idno': '450203196205289831',
+              'bankcode': '6001'},
+        '0': {'sz_a_inside_secuid': '0099996824', 'idtype': '0', 'sh_b_secuid': 'C115135357', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993761', 'sz_b_secuid': '0099996825', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996826', 'sh_a_credit_inside_secuid': '0099996826',
+              'gz_secuid': '0099996826', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474832',
+              'ggt_secuid': '0099996824', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48411',
+              'jjzh_secuid_8': '60144190000048408', 'jjzh_secuid_3': '60144190000048408',
+              'sh_a_inside_secuid': '855993761', 'sz_a_secuid': '0099996824', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993761', 'bjhg_sz_fundid': '', 'fundid': '48408',
+              'custid': '2747396', 'sz_a_credit_secuid': '0680030591', 'idno': '130637197810230323',
+              'bankcode': '6001'},
+        '3': {'sz_a_inside_secuid': '0099996830', 'idtype': '0', 'sh_b_secuid': 'C115135360', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993764', 'sz_b_secuid': '0099996831', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996832', 'sh_a_credit_inside_secuid': '0099996832',
+              'gz_secuid': '0099996832', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474835',
+              'ggt_secuid': '0099996830', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48423',
+              'jjzh_secuid_8': '60144190000048420', 'jjzh_secuid_3': '60144190000048420',
+              'sh_a_inside_secuid': '855993764', 'sz_a_secuid': '0099996830', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993764', 'bjhg_sz_fundid': '', 'fundid': '48420',
+              'custid': '2747399', 'sz_a_credit_secuid': '0680030594', 'idno': '532623196406140020',
+              'bankcode': '6001'},
+        '2': {'sz_a_inside_secuid': '0099996828', 'idtype': '0', 'sh_b_secuid': 'C115135359', 'credit_bankcode': '6001',
+              'hgt_secuid': 'A855993763', 'sz_b_secuid': '0099996829', 'orgid': '4419',
+              'sz_a_credit_inside_secuid': '0099996830', 'sh_a_credit_inside_secuid': '0099996830',
+              'gz_secuid': '0099996830', 'bjhg_sz_clientid': '', 'sh_a_credit_secuid': 'E052474834',
+              'ggt_secuid': '0099996828', 'trdpwd': '+0K8mU%)', 'custname': 'AutoTest', 'credit_fundid': '48419',
+              'jjzh_secuid_8': '60144190000048416', 'jjzh_secuid_3': '60144190000048416',
+              'sh_a_inside_secuid': '855993763', 'sz_a_secuid': '0099996828', 'sys_operid_1': '8888',
+              'sys_operid_2': '8887', 'sh_a_secuid': 'A855993763', 'bjhg_sz_fundid': '', 'fundid': '48416',
+              'custid': '2747398', 'sz_a_credit_secuid': '0680030593', 'idno': '430424196510276761',
+              'bankcode': '6001'}}}}
+
+    r = redis.Redis(host='10.187.160.140', port=6379, db=0)
+
+    set_account_group_dict("create_account", rtn, r)
+
